@@ -1,8 +1,9 @@
 import React from 'react'
 import './hero.css'
-import dark_arrow from '../../../assets/dark_arrow.png'
+import dark_arrow from '../../assets/dark_arrow.png'
 
-const hero = () => {
+
+const Hero = () => {
   return (
     <div className='hero container'>
       <div className="hero-text">
@@ -14,4 +15,4 @@ const hero = () => {
   )
 }
 
-export default hero
+export default Hero
