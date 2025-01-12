@@ -1,25 +1,21 @@
 import React from 'react'
 import './campus.css'
-import gallery_1 from '../../assets/gallery_1.png'
-import gallery_2 from '../../assets/gallery_2.png'
-import gallery_3 from '../../assets/gallery_3.png'
-import gallery_4 from '../../assets/gallery_4.png'
+import gallery_1 from '../../assets/gallery-1.png'
+import gallery_2 from '../../assets/gallery-2.png'
+import gallery_3 from '../../assets/gallery-3.png'
+import gallery_4 from '../../assets/gallery-4.png'
+import white_arrow from '../../assets/white-arrow.png'
 
 const Campus = () => {
   return (
     <div className='campus'>
         <div className="gallery">
             <img src={gallery_1} alt="" />
-        </div>  
-        <div className="gallery">
             <img src={gallery_2} alt="" />
-        </div>     
-        <div className="gallery">
             <img src={gallery_3} alt="" />
-        </div> 
-        <div className="gallery">
             <img src={gallery_4} alt="" />
         </div> 
+        <button className='btn dark-btn'>See More Here <img src={white_arrow} alt="" /></button>
     </div>
   )
 }
