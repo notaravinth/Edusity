@@ -1,29 +1,35 @@
-import React, {useEffect, useState} from 'react'
-import './navbar.css'
-import logo from '../../assets/logo.png'
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-scroll';
+import './navbar.css';
+import logo from '../../assets/logo.png';
 
-const navbar = () => {
+const Navbar = () => {
+  const [sticky, setSticky] = useState(false);
 
-    const [sticky, setSticky] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setSticky(window.scrollY > 200);
+    };
+    window.addEventListener('scroll', handleScroll);
 
-    useEffect(()=>{
-      window.addEventListener('scroll', () => {
-        window.scrollY > 200 ? setSticky(true) : setSticky(false)})
-    },[])
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className={`container ${sticky? 'dark-nav' : ''}`}>
-      <img src={logo} alt="" className='logo' />
+    <nav className={`navbar-container ${sticky ? 'dark-nav' : ''}`}>
+      <img src={logo} alt="Logo" className="logo" />
       <ul>
-        <li><link to='hero' smooth={true} offset={0} duration={500}>Home</link></li>
-        <li><link to='program' smooth={true} offset={0} duration={500}>Program</link></li>
-        <li><link to='about' smooth={true} offset={0} duration={500}>About Us</link></li>
-        <li><link to='campus' smooth={true} offset={0} duration={500}>Campus</link></li>
-        <li><link to='testimonials' smooth={true} offset={0} duration={500}>Testimonials</link></li>
-        <li><link to='contact' smooth={true} offset={0} duration={500} className='btn'>Contact Us</link></li>
+        <li><Link to="hero" smooth={true} offset={0} duration={500}>Home</Link></li>
+        <li><Link to="program" smooth={true} offset={0} duration={500}>Program</Link></li>
+        <li><Link to="about" smooth={true} offset={0} duration={500}>About Us</Link></li>
+        <li><Link to="campus" smooth={true} offset={0} duration={500}>Campus</Link></li>
+        <li><Link to="testimonials" smooth={true} offset={0} duration={500}>Testimonials</Link></li>
+        <li><Link to="contact" smooth={true} offset={0} duration={500} className="btn">Contact Us</Link></li>
       </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default navbar
+export default Navbar;
