@@ -70,7 +70,7 @@ const Testimonials = () => {
                     <div className="user-info">
                         <img src={user_4} alt="" />
                         <div>
-                            <h3>Janey</h3>
+                            <h3>Jamie</h3>
                             <span>Edusity, USA</span>
                         </div>
                     </div>
