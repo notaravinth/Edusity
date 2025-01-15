@@ -41,7 +41,7 @@ nav ul li{
 
 @media (max-width: 840px){
     nav{
-        padding: 15px 0;
+        padding: 15px 20px;
     }
     nav ul{
         position: fixed;
@@ -67,3 +67,5 @@ nav ul li{
         right: -200px;
     }
 }
+
+
