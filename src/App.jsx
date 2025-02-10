@@ -16,8 +16,8 @@ const App = () => {
       <Hero/>
       <Title subTitle="Our Programs" title="What We Offer"/>
       <div className="container">
-        <Programs/>
-        <About/>
+      <Programs/>
+      <About/>
       <Title subTitle="Gallery" title="Campus Photos"/>
       <Campus/>
       <Title subTitle="Testimonials" title="What students say"/>
